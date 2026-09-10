@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uma Hora Só Sua</title>
+<meta name="description" content="Estética facial, massoterapia e terapia capilar com Jhorrana Victória, cosmetóloga e massoterapeuta em Goiânia. Atendimento em domicílio: o cuidado chega até você.">
+<meta name="theme-color" content="#161013">
+<link rel="canonical" href="https://estetajhorrana.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Jhorrana Victória · Estética e Massoterapia em Goiânia">
+<meta property="og:description" content="Uma hora só sua — na sua casa, no seu tempo. Estética facial, massoterapia e terapia capilar em domicílio.">
+<meta property="og:image" content="assets/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..500&family=Jost:ital,wght@0,300..600;1,400&display=swap">
+<style>
+/* ============================================================
+   Jhorrana Victória — identidade visual
+   Conceito: sala de tratamento ao anoitecer. Luz de vela, pele,
+   mel morno. Escuro por natureza; tema claro é o contraponto.
+   ============================================================ */
+
+:root{
+  /* --- cor: paleta clara (padrão do :root, ver blocos escuros abaixo) --- */
+  --ground:      #F6F0F0;   /* blush-cinza, viés ameixa — neutro escolhido */
+  --ground-2:    #FBF7F6;
+  --surface:     #FFFFFF;
+  --surface-2:   #F1E7E9;
+  --line:        rgba(36,20,28,.13);
+  --line-strong: rgba(36,20,28,.28);
+  --text:        #241419;
+  --text-dim:    #6B565D;
+  --text-faint:  #94818A;
+  --mel:         #A0691F;   /* mel escurecido para contraste em fundo claro */
+  --mel-soft:    #C08B3C;
+  --mel-wash:    rgba(160,105,31,.10);
+  --euca:        #4C6A56;
+  --shadow:      0 1px 2px rgba(36,20,28,.05), 0 12px 32px -12px rgba(36,20,28,.18);
+  --glow:        radial-gradient(60% 60% at 50% 40%, rgba(192,139,60,.20), transparent 70%);
+
+  /* --- tipografia --- */
+  --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --body: "Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+
+  /* --- escala de tipo (base 17px) --- */
+  --t-xs: .75rem;
+  --t-sm: .875rem;
+  --t-base: 1.0625rem;
+  --t-md: 1.1875rem;
+  --t-lg: clamp(1.35rem, 1.1rem + .8vw, 1.7rem);
+  --t-xl: clamp(1.75rem, 1.2rem + 2vw, 2.6rem);
+  --t-2xl: clamp(2.3rem, 1.3rem + 3.6vw, 4rem);
+  --t-3xl: clamp(2.9rem, 1.2rem + 6vw, 5.6rem);
+
+  /* --- ritmo --- */
+  --shell: 1180px;
+  --prose: 34rem;
+  --gut: clamp(1.25rem, 4vw, 3rem);
+  --sec: clamp(4.5rem, 9vw, 8.5rem);
+
+  color-scheme: light;
+}
+
+/* tema escuro por preferência de sistema (não se aplica se o leitor pediu claro) */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:      #161013;
+    --ground-2:    #1E161B;
+    --surface:     #241B21;
+    --surface-2:   #2E222A;
+    --line:        rgba(244,237,230,.11);
+    --line-strong: rgba(244,237,230,.26);
+    --text:        #F4EDE6;
+    --text-dim:    #B7A6AC;
+    --text-faint:  #8A7A81;
+    --mel:         #E0A75C;
+    --mel-soft:    #F2CE9A;
+    --mel-wash:    rgba(224,167,92,.13);
+    --euca:        #8FA997;
+    --shadow:      0 1px 2px rgba(0,0,0,.4), 0 24px 48px -20px rgba(0,0,0,.75);
+    --glow:        radial-gradient(60% 60% at 50% 40%, rgba(224,167,92,.26), transparent 70%);
+    color-scheme: dark;
+  }
+}
+/* escolha explícita do leitor vence em qualquer direção */
+:root[data-theme="dark"]{
+  --ground:      #161013;
+  --ground-2:    #1E161B;
+  --surface:     #241B21;
+  --surface-2:   #2E222A;
+  --line:        rgba(244,237,230,.11);
+  --line-strong: rgba(244,237,230,.26);
+  --text:        #F4EDE6;
+  --text-dim:    #B7A6AC;
+  --text-faint:  #8A7A81;
+  --mel:         #E0A75C;
+  --mel-soft:    #F2CE9A;
+  --mel-wash:    rgba(224,167,92,.13);
+  --euca:        #8FA997;
+  --shadow:      0 1px 2px rgba(0,0,0,.4), 0 24px 48px -20px rgba(0,0,0,.75);
+  --glow:        radial-gradient(60% 60% at 50% 40%, rgba(224,167,92,.26), transparent 70%);
+  color-scheme: dark;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:var(--t-base);
+  font-weight:400;
+  line-height:1.65;
+  letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* grão fino sobre toda a página — pele, não plástico */
+body::after{
+  content:"";
+  position:fixed; inset:0; z-index:60; pointer-events:none;
+  opacity:.38; mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+
+:where(a,button,summary,[tabindex]):focus-visible{
+  outline:2px solid var(--mel);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+.skip{
+  position:absolute; left:-9999px; top:0; z-index:99;
+  background:var(--mel); color:var(--ground);
+  padding:.6rem 1rem; text-decoration:none; font-size:var(--t-sm);
+}
+.skip:focus{ left:.75rem; top:.75rem; }
+
+/* ---------- tipografia ---------- */
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-weight:500;
+  line-height:1.02;
+  letter-spacing:-.02em;
+  text-wrap:balance;
+  margin:0;
+}
+h2{ font-size:var(--t-2xl); }
+h3{ font-size:var(--t-lg); letter-spacing:-.01em; line-height:1.15; }
+p{ margin:0; }
+em{ font-style:italic; }
+
+.eyebrow{
+  font-family:var(--body);
+  font-size:var(--t-xs);
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  color:var(--text-faint);
+  display:block;
+}
+.lede{
+  font-size:var(--t-md);
+  color:var(--text-dim);
+  max-width:var(--prose);
+  line-height:1.6;
+}
+.serif-accent{ font-family:var(--display); font-style:italic; font-weight:400; color:var(--mel); }
+
+/* ---------- estrutura ---------- */
+.shell{
+  width:100%;
+  max-width:var(--shell);
+  margin-inline:auto;
+  padding-inline:var(--gut);
+}
+.section{
+  padding-block:var(--sec);
+  border-top:1px solid var(--line);
+  position:relative;
+}
+.section--plain{ border-top:0; }
+
+/* spread editorial: label à esquerda, conteúdo à direita */
+.spread{
+  display:grid;
+  grid-template-columns:minmax(0,10rem) minmax(0,1fr);
+  gap:clamp(1.5rem,4vw,4rem);
+  align-items:start;
+}
+.spread__aside{ position:sticky; top:5.5rem; }
+@media (max-width:820px){
+  .spread{ grid-template-columns:1fr; gap:1.5rem; }
+  .spread__aside{ position:static; }
+}
+.stack{ display:grid; gap:1.25rem; }
+.stack--lg{ display:grid; gap:2.5rem; }
+
+/* ---------- barra de navegação ---------- */
+.nav{
+  position:sticky; top:0; z-index:50;
+  background:color-mix(in oklab, var(--ground) 84%, transparent);
+  backdrop-filter:blur(14px) saturate(1.2);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, background .3s ease;
+}
+.nav.is-stuck{ border-bottom-color:var(--line); }
+.nav__in{
+  display:flex; align-items:center; gap:1.5rem;
+  min-height:4.25rem;
+}
+.mark{
+  font-family:var(--display);
+  font-size:1.0625rem;
+  letter-spacing:.01em;
+  text-decoration:none;
+  display:flex; align-items:baseline; gap:.5rem;
+  white-space:nowrap;
+}
+.mark b{ font-weight:600; }
+.mark span{
+  font-family:var(--body); font-size:var(--t-xs); font-weight:400;
+  text-transform:uppercase; letter-spacing:.18em; color:var(--text-faint);
+}
+.nav__links{
+  display:flex; gap:1.75rem; margin-left:auto;
+  font-size:var(--t-sm); letter-spacing:.02em;
+}
+.nav__links a{ text-decoration:none; color:var(--text-dim); transition:color .2s; }
+.nav__links a:hover{ color:var(--text); }
+.nav__cta{ margin-left:auto; }
+.nav__links + .nav__cta{ margin-left:0; }
+@media (max-width:900px){ .nav__links{ display:none; } }
+
+/* ---------- botões ---------- */
+.btn{
+  --btn-bg:var(--mel);
+  display:inline-flex; align-items:center; gap:.6rem;
+  font-family:var(--body); font-size:var(--t-sm); font-weight:500;
+  letter-spacing:.04em;
+  padding:.8rem 1.4rem;
+  border-radius:999px;
+  border:1px solid transparent;
+  background:var(--btn-bg);
+  color:var(--ground);
+  text-decoration:none;
+  cursor:pointer;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .25s;
+  box-shadow:0 1px 0 color-mix(in oklab, var(--mel-soft) 60%, transparent) inset;
+}
+.btn:hover{ transform:translateY(-2px); box-shadow:0 10px 26px -10px color-mix(in oklab, var(--mel) 70%, transparent); }
+.btn:active{ transform:translateY(0); }
+.btn--ghost{
+  background:transparent; color:var(--text);
+  border-color:var(--line-strong);
+  box-shadow:none;
+}
+.btn--ghost:hover{ background:var(--mel-wash); border-color:var(--mel); box-shadow:none; }
+.btn--sm{ padding:.55rem 1rem; font-size:var(--t-xs); }
+.btn--lg{ padding:1rem 1.9rem; font-size:var(--t-base); }
+.btn__wa{ width:1.05em; height:1.05em; flex:none; }
+.btn-row{ display:flex; flex-wrap:wrap; gap:.75rem 1rem; align-items:center; }
+
+/* ---------- hero ---------- */
+.hero{ position:relative; padding-block:clamp(3rem,7vw,6rem) var(--sec); overflow:hidden; }
+.hero__glow{
+  position:absolute; z-index:0; pointer-events:none;
+  inset-inline:-20%; top:-30%; height:110%;
+  background:var(--glow);
+  animation:breathe 11s ease-in-out infinite alternate;
+}
+@keyframes breathe{
+  from{ opacity:.75; transform:translate3d(-2%,0,0) scale(1); }
+  to  { opacity:1;   transform:translate3d(3%,2%,0) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce){ .hero__glow{ animation:none; } }
+
+.hero__grid{
+  position:relative; z-index:1;
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(2rem,5vw,4.5rem);
+  align-items:center;
+}
+@media (max-width:900px){ .hero__grid{ grid-template-columns:1fr; } }
+
+.hero__title{
+  font-size:var(--t-3xl);
+  margin-block:1.25rem .5rem;
+}
+.hero__title i{
+  font-style:italic; font-weight:400;
+  color:var(--mel);
+}
+.hero__sub{
+  font-size:var(--t-md);
+  color:var(--text-dim);
+  max-width:32rem;
+  margin-block:1.25rem 2rem;
+}
+.hero__sub strong{ color:var(--text); font-weight:500; }
+
+.trust{
+  display:flex; flex-wrap:wrap; gap:.5rem 1.5rem;
+  margin-top:2.25rem; padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-size:var(--t-xs);
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--text-faint);
+}
+.trust li{ list-style:none; display:flex; align-items:center; gap:.5rem; }
+.trust li::before{
+  content:""; width:4px; height:4px; border-radius:50%;
+  background:var(--mel); flex:none;
+}
+.trust{ margin:2.25rem 0 0; padding-inline:0; }
+
+/* retrato do hero + selo flutuante */
+.portrait{ position:relative; }
+.portrait__badge{
+  position:absolute; bottom:1rem; left:-.75rem;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:2px;
+  padding:.7rem .95rem;
+  box-shadow:var(--shadow);
+  font-size:var(--t-xs);
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--text-dim);
+  display:flex; align-items:center; gap:.55rem;
+  max-width:calc(100% - 1rem);
+}
+.portrait__badge::before{
+  content:""; width:6px; height:6px; border-radius:50%;
+  background:var(--euca); flex:none;
+  box-shadow:0 0 0 3px color-mix(in oklab, var(--euca) 22%, transparent);
+}
+
+/* ---------- slot de foto (substituir por <img>) ---------- */
+.ph{
+  position:relative;
+  width:100%;
+  max-width:100%;
+  border-radius:2px;
+  overflow:hidden;
+  background:
+    linear-gradient(150deg, var(--mel-wash), transparent 55%),
+    linear-gradient(200deg, color-mix(in oklab, var(--euca) 14%, transparent), transparent 60%),
+    var(--surface-2);
+  border:1px solid var(--line);
+  display:grid; place-items:center;
+}
+.ph::before{
+  content:"";
+  position:absolute; inset:.5rem;
+  border:1px solid var(--line);
+  border-radius:1px;
+  pointer-events:none;
+}
+.ph span{
+  font-size:var(--t-xs);
+  letter-spacing:.16em; text-transform:uppercase;
+  color:var(--text-faint);
+  text-align:center;
+  padding:1rem;
+  max-width:16rem;
+}
+.ph--45{ aspect-ratio:4/5; }
+.ph--11{ aspect-ratio:1/1; }
+.ph--32{ aspect-ratio:3/2; }
+.ph img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+/* ---------- dores ---------- */
+.pains{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));
+  gap:0 clamp(1.5rem,4vw,3rem);
+  margin-top:2.5rem;
+  border-top:1px solid var(--line);
+}
+.pain{
+  padding:1.6rem 1.5rem 1.6rem 0;
+  border-bottom:1px solid var(--line);
+  display:grid; gap:.4rem;
+}
+.pain__mark{
+  font-family:var(--display); font-style:italic;
+  font-size:1.35rem; color:var(--mel); line-height:1;
+}
+.pain p{ font-size:var(--t-base); color:var(--text-dim); }
+.pain p b{ color:var(--text); font-weight:500; }
+.bridge{
+  margin-top:2.5rem;
+  font-family:var(--display);
+  font-size:var(--t-lg);
+  line-height:1.35;
+  max-width:38rem;
+  text-wrap:balance;
+}
+
+/* ---------- serviços ---------- */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(17.5rem,1fr));
+  gap:1px;
+  margin-top:3rem;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:3px;
+  overflow:hidden;
+}
+.svc{
+  position:relative;
+  background:var(--ground);
+  padding:2rem 1.75rem 1.75rem;
+  display:grid; gap:1rem;
+  align-content:start;
+  transition:background .35s ease;
+  isolation:isolate;
+}
+.svc::before{
+  content:""; position:absolute; inset:auto 0 0 0; height:0;
+  background:linear-gradient(to top, var(--mel-wash), transparent);
+  transition:height .45s cubic-bezier(.2,.8,.2,1);
+  z-index:-1;
+}
+.svc:hover::before, .svc:focus-within::before{ height:100%; }
+.svc__num{
+  font-size:var(--t-xs); letter-spacing:.2em; text-transform:uppercase;
+  color:var(--mel);
+}
+.svc__for{ font-family:var(--display); font-style:italic; color:var(--text-dim); font-size:var(--t-base); }
+.svc__list{ margin:0; padding:0; display:grid; gap:.45rem; }
+.svc__list li{
+  list-style:none; font-size:var(--t-sm); color:var(--text-dim);
+  padding-left:1.1rem; position:relative; line-height:1.5;
+}
+.svc__list li::before{
+  content:""; position:absolute; left:0; top:.62em;
+  width:.5rem; height:1px; background:var(--line-strong);
+}
+.svc__out{
+  font-size:var(--t-sm);
+  color:var(--text);
+  border-top:1px solid var(--line);
+  padding-top:1rem;
+}
+.svc__out b{ color:var(--euca); font-weight:500; letter-spacing:.02em; }
+.svc__cta{
+  font-size:var(--t-sm); font-weight:500; letter-spacing:.03em;
+  color:var(--mel); text-decoration:none;
+  display:inline-flex; align-items:center; gap:.4rem;
+  margin-top:.25rem;
+}
+.svc__cta::after{ content:"→"; transition:transform .25s; }
+.svc__cta:hover::after{ transform:translateX(4px); }
+
+/* ---------- ritual (sequência real → numerado) ---------- */
+.ritual{ margin-top:3rem; display:grid; gap:0; position:relative; }
+.step{
+  display:grid;
+  grid-template-columns:4.5rem minmax(0,1fr);
+  gap:clamp(1rem,3vw,2.5rem);
+  padding-block:2rem;
+  border-top:1px solid var(--line);
+  align-items:start;
+}
+.step:last-child{ border-bottom:1px solid var(--line); }
+.step__n{
+  font-family:var(--display);
+  font-size:clamp(2rem,4vw,3rem);
+  line-height:.9;
+  color:var(--mel);
+  font-variant-numeric:tabular-nums;
+  position:relative;
+}
+.step__body{ display:grid; gap:.55rem; max-width:var(--prose); }
+.step__body p{ color:var(--text-dim); }
+@media (max-width:560px){
+  .step{ grid-template-columns:1fr; gap:.5rem; }
+  .step__n{ font-size:1.75rem; }
+}
+
+/* ---------- galeria de resultados ---------- */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
+  gap:1rem;
+  margin-top:2.5rem;
+}
+.gallery figure{ margin:0; display:grid; gap:.65rem; }
+.gallery figcaption{
+  font-size:var(--t-xs); letter-spacing:.06em;
+  color:var(--text-faint);
+}
+
+/* ---------- depoimentos ---------- */
+.quotes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
+  gap:1rem;
+  margin-top:2.5rem;
+}
+.quote{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:1.6rem 1.5rem;
+  display:grid; gap:1rem;
+  align-content:space-between;
+  box-shadow:var(--shadow);
+}
+.quote blockquote{
+  margin:0;
+  font-family:var(--display);
+  font-size:var(--t-md);
+  line-height:1.4;
+}
+.quote figcaption{
+  font-size:var(--t-xs); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--text-faint);
+  border-top:1px solid var(--line); padding-top:.9rem;
+}
+.todo{
+  display:inline-block;
+  font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--mel);
+  background:var(--mel-wash);
+  border:1px dashed color-mix(in oklab, var(--mel) 45%, transparent);
+  border-radius:999px;
+  padding:.15rem .55rem;
+}
+
+/* ---------- sobre ---------- */
+.about{
+  display:grid;
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:clamp(1.75rem,5vw,4rem);
+  align-items:center;
+  margin-top:2.5rem;
+}
+@media (max-width:820px){ .about{ grid-template-columns:1fr; } }
+.about__body{ display:grid; gap:1.1rem; max-width:var(--prose); }
+.about__body p{ color:var(--text-dim); }
+.about__body p:first-of-type{ color:var(--text); font-size:var(--t-md); }
+.creds{ display:grid; gap:.5rem; margin:.5rem 0 0; padding:0; }
+.creds li{
+  list-style:none;
+  font-size:var(--t-sm); color:var(--text-dim);
+  display:flex; gap:.7rem; align-items:baseline;
+}
+.creds li::before{
+  content:"—"; color:var(--mel); flex:none;
+}
+.sign{
+  font-family:var(--display); font-style:italic;
+  font-size:1.6rem; color:var(--text);
+  margin-top:.5rem;
+}
+
+/* ---------- faq ---------- */
+.faq{ margin-top:2.5rem; border-top:1px solid var(--line); }
+.faq details{ border-bottom:1px solid var(--line); }
+.faq summary{
+  cursor:pointer;
+  list-style:none;
+  padding:1.25rem 2.5rem 1.25rem 0;
+  position:relative;
+  font-size:var(--t-md);
+  font-family:var(--display);
+  line-height:1.3;
+  transition:color .2s;
+}
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary:hover{ color:var(--mel); }
+.faq summary::after{
+  content:""; position:absolute; right:.35rem; top:1.75rem;
+  width:.7rem; height:.7rem;
+  border-right:1px solid var(--line-strong);
+  border-bottom:1px solid var(--line-strong);
+  transform:rotate(45deg); transform-origin:center;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1);
+}
+.faq details[open] summary::after{ transform:rotate(-135deg); }
+.faq__a{
+  padding:0 2.5rem 1.5rem 0;
+  color:var(--text-dim);
+  max-width:var(--prose);
+  display:grid; gap:.75rem;
+}
+
+/* ---------- cta final ---------- */
+.close{
+  position:relative;
+  overflow:hidden;
+  background:var(--ground-2);
+  border-top:1px solid var(--line);
+  padding-block:var(--sec);
+  text-align:center;
+}
+.close__glow{
+  position:absolute; inset-inline:-10%; bottom:-60%; height:120%;
+  background:var(--glow); pointer-events:none;
+}
+.close__in{ position:relative; display:grid; gap:1.5rem; justify-items:center; }
+.close h2{ font-size:var(--t-2xl); max-width:26ch; }
+.close p{ color:var(--text-dim); max-width:42ch; }
+.close .btn-row{ justify-content:center; margin-top:.5rem; }
+.close small{ color:var(--text-faint); font-size:var(--t-xs); letter-spacing:.1em; text-transform:uppercase; }
+
+/* ---------- footer ---------- */
+.foot{
+  border-top:1px solid var(--line);
+  padding-block:2.5rem 6rem;
+  font-size:var(--t-sm);
+  color:var(--text-dim);
+}
+.foot__in{ display:flex; flex-wrap:wrap; gap:1.25rem 2rem; align-items:center; }
+.foot a{ text-decoration:none; color:var(--text-dim); transition:color .2s; }
+.foot a:hover{ color:var(--mel); }
+.foot__sep{ margin-left:auto; }
+@media (max-width:640px){ .foot__sep{ margin-left:0; } }
+
+/* ---------- barra fixa mobile ---------- */
+.dock{
+  position:fixed; z-index:55;
+  inset-inline:0; bottom:0;
+  padding:.65rem var(--gut) calc(.65rem + env(safe-area-inset-bottom));
+  background:color-mix(in oklab, var(--ground) 90%, transparent);
+  backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+  display:none;
+}
+.dock .btn{ width:100%; justify-content:center; }
+@media (max-width:900px){ .dock{ display:block; } }
+
+/* ---------- alternador de tema ---------- */
+.theme{
+  background:transparent; border:1px solid var(--line);
+  border-radius:999px; width:2.1rem; height:2.1rem;
+  display:grid; place-items:center; cursor:pointer;
+  color:var(--text-dim); flex:none;
+  transition:border-color .2s, color .2s;
+}
+.theme:hover{ border-color:var(--mel); color:var(--mel); }
+.theme svg{ width:.95rem; height:.95rem; }
+
+/* ---------- sequência de entrada (estado de repouso é visível) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .rise{ animation:rise .9s cubic-bezier(.2,.8,.2,1) both; }
+  .rise-2{ animation-delay:.09s; }
+  .rise-3{ animation-delay:.18s; }
+  .rise-4{ animation-delay:.27s; }
+  @keyframes rise{
+    from{ opacity:0; transform:translateY(14px); }
+    to  { opacity:1; transform:none; }
+  }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#servicos">Ir para os serviços</a>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="shell nav__in">
+    <a class="mark" href="#top">
+      <b>Jhorrana Victória</b>
+      <span>Estética &amp; Massoterapia</span>
+    </a>
+    <nav class="nav__links" aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#ritual">Como funciona</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <div class="nav__cta" style="display:flex;gap:.6rem;align-items:center">
+      <button class="theme" id="theme" type="button" aria-label="Alternar tema claro e escuro">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <a class="btn btn--sm" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Vi%20seu%20site%20e%20quero%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+        <svg class="btn__wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.3-1.94 1.35-.53.05-1.03.24-3.5-.73-2.97-1.17-4.83-4.24-4.98-4.44-.15-.2-1.18-1.57-1.18-3s.75-2.12 1.01-2.41c.27-.29.58-.37.78-.37h.56c.18 0 .42-.07.66.5.24.58.83 2.02.9 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="shell hero__grid">
+    <div>
+      <span class="eyebrow rise">Goiânia · atendimento em domicílio</span>
+      <h1 class="hero__title rise rise-2">Uma hora <i>só sua</i> — na sua casa, no seu tempo.</h1>
+      <p class="hero__sub rise rise-3">
+        Estética facial, massoterapia e terapia capilar com <strong>Jhorrana Victória</strong>,
+        cosmetóloga e massoterapeuta. Eu levo o cuidado até você: a maca, os produtos,
+        a música baixa, o silêncio. <strong>Você só precisa deitar.</strong>
+      </p>
+      <div class="btn-row rise rise-3">
+        <a class="btn btn--lg" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Quero%20agendar%20um%20atendimento.%20Pode%20me%20ajudar%20a%20escolher%3F" target="_blank" rel="noopener">
+          <svg class="btn__wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.3-1.94 1.35-.53.05-1.03.24-3.5-.73-2.97-1.17-4.83-4.24-4.98-4.44-.15-.2-1.18-1.57-1.18-3s.75-2.12 1.01-2.41c.27-.29.58-.37.78-.37h.56c.18 0 .42-.07.66.5.24.58.83 2.02.9 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
+          Quero agendar meu horário
+        </a>
+        <a class="btn btn--ghost btn--lg" href="#servicos">Ver o que eu faço</a>
+      </div>
+      <ul class="trust rise rise-4">
+        <li>Cosmetóloga &amp; massoterapeuta</li>
+        <li>Protocolo individualizado</li>
+        <li>Produtos profissionais</li>
+        <li>Sem sala de espera</li>
+      </ul>
+    </div>
+
+    <div class="portrait rise rise-3">
+      <!-- TROCAR: <img src="assets/img/jhorrana-hero.jpg" alt="Jhorrana Victória atendendo"> dentro do .ph -->
+      <div class="ph ph--45"><span>Foto vertical 4:5 — você atendendo, mão na pele da cliente, luz quente</span></div>
+      <div class="portrait__badge">Agenda aberta esta semana</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DORES ============================ -->
+<section class="section" id="reconhece">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Antes de tudo</span></div>
+    <div>
+      <h2>Se você se reconhecer aqui, a gente precisa conversar.</h2>
+      <div class="pains">
+        <div class="pain">
+          <span class="pain__mark" aria-hidden="true">&ldquo;</span>
+          <p><b>Olho no espelho e vejo cansaço antes de me ver.</b> A pele perdeu o viço, o rosto parece pesado.</p>
+        </div>
+        <div class="pain">
+          <span class="pain__mark" aria-hidden="true">&ldquo;</span>
+          <p><b>Minha pele mudou.</b> Oleosidade, cravos, textura, manchas que não saem — e nada que eu compro na farmácia resolve.</p>
+        </div>
+        <div class="pain">
+          <span class="pain__mark" aria-hidden="true">&ldquo;</span>
+          <p><b>Meu ombro e minha nuca vivem travados.</b> Durmo com dor e acordo com dor. Já virou normal.</p>
+        </div>
+        <div class="pain">
+          <span class="pain__mark" aria-hidden="true">&ldquo;</span>
+          <p><b>Minha cabeça não desliga.</b> A ansiedade aparece no corpo antes de aparecer na cabeça.</p>
+        </div>
+        <div class="pain">
+          <span class="pain__mark" aria-hidden="true">&ldquo;</span>
+          <p><b>O cabelo cai no travesseiro, na escova, no ralo.</b> Já parei de contar — e de olhar.</p>
+        </div>
+        <div class="pain">
+          <span class="pain__mark" aria-hidden="true">&ldquo;</span>
+          <p><b>Cuido de todo mundo e nunca sobra uma hora pra mim.</b> Sair de casa pra isso parece luxo demais.</p>
+        </div>
+      </div>
+      <p class="bridge">
+        Nada disso é frescura. É o corpo pedindo atenção —
+        e <span class="serif-accent">existe protocolo</span> para cada um desses casos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVIÇOS ============================ -->
+<section class="section" id="servicos">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Serviços</span></div>
+    <div>
+      <h2>Quatro frentes de cuidado. Uma profissional só.</h2>
+      <p class="lede" style="margin-top:1.25rem">
+        Cada atendimento começa com avaliação. Nada de protocolo de prateleira:
+        eu monto o seu a partir do que a sua pele, o seu corpo ou o seu couro cabeludo estão pedindo.
+      </p>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="services">
+
+      <article class="svc">
+        <span class="svc__num">Estética facial</span>
+        <h3>Para a pele que perdeu o brilho.</h3>
+        <p class="svc__for">Acne, oleosidade, cravos, manchas, textura, sinais de cansaço.</p>
+        <ul class="svc__list">
+          <li>Limpeza de pele profunda com extração</li>
+          <li>Protocolo para acne e controle de oleosidade</li>
+          <li>Clareamento de manchas e uniformização</li>
+          <li>Hidratação, revitalização e viço</li>
+          <li>Máscaras e ativos escolhidos para o seu caso</li>
+        </ul>
+        <p class="svc__out"><b>Você sai com</b> pele limpa, mais uniforme, com viço — e uma rotina de casa simples, que você consegue manter.</p>
+        <a class="svc__cta" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Quero%20saber%20sobre%20est%C3%A9tica%20facial." target="_blank" rel="noopener">Agendar estética facial</a>
+      </article>
+
+      <article class="svc">
+        <span class="svc__num">Massoterapia</span>
+        <h3>Para o corpo que carrega o dia inteiro.</h3>
+        <p class="svc__for">Tensão na nuca e nos ombros, estresse, retenção, sono ruim.</p>
+        <ul class="svc__list">
+          <li>Massagem relaxante</li>
+          <li>Drenagem linfática</li>
+          <li>Massagem modeladora</li>
+          <li>Liberação de tensão cervical e lombar</li>
+          <li>Ritmo e pressão ajustados a você</li>
+        </ul>
+        <p class="svc__out"><b>Você sai com</b> o corpo leve, o ombro que solta, a respiração mais funda — e dormindo melhor na mesma noite.</p>
+        <a class="svc__cta" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Quero%20saber%20sobre%20massoterapia." target="_blank" rel="noopener">Agendar massoterapia</a>
+      </article>
+
+      <article class="svc">
+        <span class="svc__num">Terapia capilar</span>
+        <h3>Para o couro cabeludo pedindo socorro.</h3>
+        <p class="svc__for">Queda, oleosidade, descamação, coceira, fio fraco e sem vida.</p>
+        <ul class="svc__list">
+          <li>Avaliação do couro cabeludo</li>
+          <li>Protocolo para queda e fortalecimento</li>
+          <li>Controle de oleosidade e descamação</li>
+          <li>Esfoliação e hidratação profunda</li>
+          <li>Orientação de lavagem e cuidados em casa</li>
+        </ul>
+        <p class="svc__out"><b>Você sai com</b> couro cabeludo saudável, queda sob controle e fio que volta a ter corpo.</p>
+        <a class="svc__cta" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Quero%20saber%20sobre%20terapia%20capilar." target="_blank" rel="noopener">Agendar terapia capilar</a>
+      </article>
+
+      <article class="svc">
+        <span class="svc__num">Maquiagem</span>
+        <h3>Para o dia em que você quer ser inesquecível.</h3>
+        <p class="svc__for">Casamento, formatura, aniversário, ensaio, evento de trabalho.</p>
+        <ul class="svc__list">
+          <li>Maquiagem social</li>
+          <li>Noivas, madrinhas e formandas</li>
+          <li>Preparo de pele antes da make</li>
+          <li>Ensaio prévio para datas importantes</li>
+          <li>Feita na sua casa, no seu horário</li>
+        </ul>
+        <p class="svc__out"><b>Você sai com</b> uma make que combina com você, que aguenta a festa inteira e fotografa bem.</p>
+        <a class="svc__cta" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Quero%20saber%20sobre%20maquiagem%20para%20um%20evento." target="_blank" rel="noopener">Agendar maquiagem</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RITUAL (sequência) ============================ -->
+<section class="section" id="ritual">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Como funciona</span></div>
+    <div>
+      <h2>O atendimento em casa, passo a passo.</h2>
+      <p class="lede" style="margin-top:1.25rem">
+        A parte mais difícil de se cuidar é sair de casa. Então eu tirei essa parte.
+      </p>
+
+      <div class="ritual">
+        <div class="step">
+          <div class="step__n">01</div>
+          <div class="step__body">
+            <h3>A conversa antes</h3>
+            <p>Antes de qualquer coisa, a gente fala no WhatsApp: o que te incomoda, como é a sua rotina, o que você já tentou, se tem alguma condição de saúde. Eu monto o protocolo antes de sair de casa — você não perde uma sessão descobrindo o que fazer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__n">02</div>
+          <div class="step__body">
+            <h3>Eu chego com tudo</h3>
+            <p>Maca, lençol e toalhas limpas, produtos profissionais, óleo morno, música baixa. Em poucos minutos o seu quarto ou a sua sala vira um espaço de tratamento — e volta a ser sua casa quando eu saio.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__n">03</div>
+          <div class="step__body">
+            <h3>A sua hora</h3>
+            <p>Sem trânsito, sem recepção, sem celular. Só técnica, mão firme e silêncio. Eu explico o que estou fazendo e vou ajustando a pressão com você — o atendimento é seu, não meu.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__n">04</div>
+          <div class="step__body">
+            <h3>O depois</h3>
+            <p>Você recebe por escrito o que fazer em casa e a gente combina o intervalo até a próxima sessão. Resultado bonito se constrói em série, com constância — não em milagre. Eu prefiro te falar isso agora do que te vender promessa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESULTADOS ============================ -->
+<section class="section" id="resultados">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Resultados</span></div>
+    <div>
+      <h2>Pele de cliente real, sem filtro.</h2>
+      <p class="lede" style="margin-top:1.25rem">
+        Antes e depois de atendimentos feitos por mim, com autorização de cada cliente.
+        Mesma luz, mesmo ângulo, sem edição — porque o resultado precisa se sustentar sozinho.
+      </p>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="gallery">
+      <!-- TROCAR cada .ph por <img src="assets/img/resultado-1.jpg" alt="..."> -->
+      <figure>
+        <div class="ph ph--11"><span>Antes &amp; depois 1:1</span></div>
+        <figcaption>Limpeza de pele profunda · 1 sessão</figcaption>
+      </figure>
+      <figure>
+        <div class="ph ph--11"><span>Antes &amp; depois 1:1</span></div>
+        <figcaption>Protocolo para acne · 4 sessões</figcaption>
+      </figure>
+      <figure>
+        <div class="ph ph--11"><span>Antes &amp; depois 1:1</span></div>
+        <figcaption>Clareamento de manchas · 6 sessões</figcaption>
+      </figure>
+      <figure>
+        <div class="ph ph--11"><span>Antes &amp; depois 1:1</span></div>
+        <figcaption>Terapia capilar · 3 sessões</figcaption>
+      </figure>
+    </div>
+    <p style="margin-top:1.5rem"><span class="todo">Preencher</span> <span style="color:var(--text-faint);font-size:var(--t-sm)">&nbsp;troque as 4 imagens e ajuste as legendas para o número real de sessões.</span></p>
+  </div>
+</section>
+
+<!-- ============================ DEPOIMENTOS ============================ -->
+<section class="section" id="depoimentos">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Quem já passou por aqui</span></div>
+    <div>
+      <h2>O que elas falam depois.</h2>
+      <p class="lede" style="margin-top:1.25rem">
+        <span class="todo">Preencher</span> &nbsp;os três blocos abaixo são modelos. Substitua pelo texto real das suas clientes —
+        um depoimento verdadeiro e específico vale mais que dez genéricos.
+      </p>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="quotes">
+      <figure class="quote">
+        <blockquote>&ldquo;Exemplo: eu não lembrava da última vez que tinha uma hora só pra mim. Dormi como não dormia há meses.&rdquo;</blockquote>
+        <figcaption>Nome da cliente · bairro · serviço</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>&ldquo;Exemplo: minha pele mudou de textura na primeira sessão e as manchas clarearam de verdade até a quarta.&rdquo;</blockquote>
+        <figcaption>Nome da cliente · bairro · serviço</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>&ldquo;Exemplo: ela chega, monta tudo, e eu nem preciso me arrumar pra sair. Virou meu compromisso favorito do mês.&rdquo;</blockquote>
+        <figcaption>Nome da cliente · bairro · serviço</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SOBRE ============================ -->
+<section class="section" id="sobre">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Sobre mim</span></div>
+    <div>
+      <h2>Prazer, eu sou a Jhorrana.</h2>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="about">
+      <div>
+        <!-- TROCAR: <img src="assets/img/jhorrana-retrato.jpg" alt="Retrato de Jhorrana Victória"> -->
+        <div class="ph ph--45"><span>Retrato 4:5 — você olhando pra câmera, uniforme, luz suave</span></div>
+      </div>
+      <div class="about__body">
+        <p>
+          Sou esteticista cosmetóloga e massoterapeuta, e trabalho com uma ideia simples:
+          <span class="serif-accent">autoestima é saúde</span>. Não é vaidade, não é luxo — é o jeito
+          que você se olha e se trata todos os dias.
+        </p>
+        <p>
+          Comecei a atender em domicílio porque percebi um padrão: a mulher que mais precisava de uma
+          pausa era exatamente a que não conseguia sair de casa para tê-la. Trabalho, filhos, cansaço,
+          trânsito de Goiânia. Então eu inverti a rota — e o cuidado passou a ir até ela.
+        </p>
+        <p>
+          Meu atendimento é técnico e é humano. Eu avalio antes de tocar, explico o que estou fazendo,
+          uso produto profissional e não prometo o que a sua pele ou o seu corpo não podem entregar
+          em uma sessão. O que eu prometo é constância, mão cuidadosa e um lugar onde você pode
+          simplesmente parar por uma hora.
+        </p>
+        <ul class="creds">
+          <li>Esteticista cosmetóloga com formação superior</li>
+          <li>Massoterapeuta</li>
+          <li>Terapia capilar e maquiagem profissional</li>
+          <li>Atendimento em domicílio em Goiânia e região</li>
+        </ul>
+        <p class="sign">Jhorrana Victória</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" id="duvidas">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">Dúvidas</span></div>
+    <div>
+      <h2>O que todo mundo pergunta antes de marcar.</h2>
+
+      <div class="faq">
+        <details open>
+          <summary>Como funciona o atendimento em casa? Preciso preparar algo?</summary>
+          <div class="faq__a">
+            <p>Não precisa preparar nada. Eu levo maca, lençóis, toalhas e todos os produtos. O que eu peço é só um espaço de mais ou menos 2 metros por 2 metros — pode ser no quarto, na sala ou na varanda — e um ponto de energia por perto, dependendo do procedimento.</p>
+            <p>Se for estética facial, é bom ter uma pia ou banheiro acessível para você lavar o rosto.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quanto custa?</summary>
+          <div class="faq__a">
+            <p>O valor depende do procedimento, do tempo de sessão e da região do atendimento. Me chame no WhatsApp contando o que você quer resolver: eu te passo o valor exato e, se fizer sentido, uma opção de pacote — que sai mais em conta do que sessões avulsas.</p>
+            <p><span class="todo">Preencher</span> se você quiser mostrar preço aqui, troque este texto por uma faixa (ex.: “a partir de R$ XX”).</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quantas sessões eu vou precisar?</summary>
+          <div class="faq__a">
+            <p>Depende do que estamos tratando. Uma limpeza de pele ou uma massagem relaxante já entregam resultado na primeira. Acne, manchas, retenção e queda de cabelo são processos: normalmente trabalhamos em série, com intervalos definidos na avaliação.</p>
+            <p>Eu sempre te digo na primeira sessão quantas eu estimo — e por quê.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Quais regiões você atende?</summary>
+          <div class="faq__a">
+            <p>Atendo em Goiânia e região. Para bairros mais distantes pode haver taxa de deslocamento — combinada antes, nunca na hora.</p>
+            <p><span class="todo">Preencher</span> liste aqui os bairros/regiões que você atende sem taxa.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Dá para marcar de noite ou no fim de semana?</summary>
+          <div class="faq__a">
+            <p>Sim — a agenda em domicílio é justamente para caber na sua rotina, e não o contrário. Horários de fim de tarde, noite e sábado são os mais procurados, então vale reservar com alguns dias de antecedência.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Você atende homens?</summary>
+          <div class="faq__a">
+            <p>Sim. Limpeza de pele, massoterapia e terapia capilar são para qualquer pessoa. O atendimento é o mesmo: avaliação, técnica e respeito.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Tenho uma condição de saúde / estou gestante. Pode?</summary>
+          <div class="faq__a">
+            <p>Me conte na conversa inicial. Gestação, pressão alta, diabetes, varizes, uso de ácidos, procedimentos recentes e algumas condições de pele mudam o protocolo — às vezes adaptando, às vezes contraindicando. Segurança vem antes de resultado, sempre.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Como funciona o pagamento?</summary>
+          <div class="faq__a">
+            <p><span class="todo">Preencher</span> descreva aqui as formas que você aceita — Pix, dinheiro, cartão, pacotes parcelados — e se há sinal para reserva de horário.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FECHAMENTO ============================ -->
+<section class="close">
+  <div class="close__glow" aria-hidden="true"></div>
+  <div class="shell close__in">
+    <span class="eyebrow">Último passo</span>
+    <h2>A sua próxima hora livre pode ser a melhor da semana.</h2>
+    <p>
+      Me manda uma mensagem contando o que você quer resolver. Quem responde sou eu —
+      e a primeira conversa não custa nada.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn--lg" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Vim%20do%20seu%20site.%20Quero%20agendar%20e%20saber%20os%20valores." target="_blank" rel="noopener">
+        <svg class="btn__wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.3-1.94 1.35-.53.05-1.03.24-3.5-.73-2.97-1.17-4.83-4.24-4.98-4.44-.15-.2-1.18-1.57-1.18-3s.75-2.12 1.01-2.41c.27-.29.58-.37.78-.37h.56c.18 0 .42-.07.66.5.24.58.83 2.02.9 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/estetajhorrana/" target="_blank" rel="noopener">Ver meu Instagram</a>
+    </div>
+    <small>Goiânia · atendimento em domicílio</small>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell foot__in">
+    <span style="font-family:var(--display);font-size:1.05rem">Jhorrana Victória</span>
+    <a href="https://www.instagram.com/estetajhorrana/" target="_blank" rel="noopener">@estetajhorrana</a>
+    <a href="https://wa.me/5563992096669" target="_blank" rel="noopener">(63) 99209-6669</a>
+    <span class="foot__sep" style="color:var(--text-faint);font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase">Esteticista cosmetóloga &amp; massoterapeuta · Goiânia&nbsp;-&nbsp;GO</span>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn" href="https://wa.me/5563992096669?text=Oi%20Jhorrana!%20Vim%20do%20seu%20site%20e%20quero%20agendar." target="_blank" rel="noopener">
+    <svg class="btn__wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.4 1.3-1.94 1.35-.53.05-1.03.24-3.5-.73-2.97-1.17-4.83-4.24-4.98-4.44-.15-.2-1.18-1.57-1.18-3s.75-2.12 1.01-2.41c.27-.29.58-.37.78-.37h.56c.18 0 .42-.07.66.5.24.58.83 2.02.9 2.17.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
+    Agendar pelo WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HealthAndBeautyBusiness",
+  "name":"Jhorrana Victória — Estética e Massoterapia",
+  "description":"Estética facial, massoterapia, terapia capilar e maquiagem com atendimento em domicílio em Goiânia.",
+  "areaServed":{"@type":"City","name":"Goiânia"},
+  "address":{"@type":"PostalAddress","addressLocality":"Goiânia","addressRegion":"GO","addressCountry":"BR"},
+  "telephone":"+5563992096669",
+  "sameAs":["https://www.instagram.com/estetajhorrana/"],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Estética facial"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Massoterapia"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Terapia capilar"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Maquiagem profissional"}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* filete da nav aparece só quando a página rolou */
+  var nav = document.getElementById("nav");
+  var onScroll = function(){
+    if (nav) nav.classList.toggle("is-stuck", window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, {passive:true});
+
+  /* alternador de tema — grava a escolha do visitante */
+  var root = document.documentElement;
+  var btn = document.getElementById("theme");
+  var KEY = "jv-theme";
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
+  } catch (e) { /* navegação privada: segue no tema do sistema */ }
+
+  function current(){
+    var attr = root.getAttribute("data-theme");
+    if (attr) return attr;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  if (btn) {
+    btn.addEventListener("click", function(){
+      var next = current() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      btn.setAttribute("aria-label", next === "dark" ? "Mudar para tema claro" : "Mudar para tema escuro");
+    });
+  }
+
+  /* uma pergunta aberta por vez no FAQ */
+  var items = document.querySelectorAll(".faq details");
+  items.forEach(function(d){
+    d.addEventListener("toggle", function(){
+      if (!d.open) return;
+      items.forEach(function(o){ if (o !== d) o.open = false; });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Coloque as fotos aqui. Nomes esperados pelo index.html:
+
+  jhorrana-hero.jpg      vertical 4:5   >= 1000px de largura
+  jhorrana-retrato.jpg   vertical 4:5   >= 1000px
+  resultado-1.jpg        quadrado 1:1   >= 900px
+  resultado-2.jpg        quadrado 1:1
+  resultado-3.jpg        quadrado 1:1
+  resultado-4.jpg        quadrado 1:1
+  og.jpg                 1200 x 630     (aparece ao compartilhar o link)
+
+Antes e depois: mesma luz, mesmo angulo, sem filtro, com autorizacao da cliente.
+Comprima em https://squoosh.app antes de subir (mire abaixo de 300 KB por foto).
