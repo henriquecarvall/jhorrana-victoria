@@ -504,6 +504,48 @@ em{ font-style:italic; }
   color:var(--text-faint);
 }
 
+/* ---------- instagram (embeds ao vivo) ---------- */
+.ig{
+  margin-top:2.5rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr));
+  gap:1.25rem;
+  align-items:start;
+}
+.ig .instagram-media{
+  margin:0 auto !important;
+  min-width:0 !important;
+  width:100% !important;
+  max-width:100% !important;
+  border-radius:6px !important;
+  box-shadow:var(--shadow) !important;
+}
+/* enquanto o script do Instagram nao hidrata, mostra um cartao-esqueleto */
+.ig blockquote:not([data-processed]){
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:6px;
+  min-height:26rem;
+  display:flex; align-items:center; justify-content:center;
+  padding:1.5rem;
+}
+.ig blockquote:not([data-processed]) a{
+  color:var(--mel); text-decoration:none;
+  font-size:var(--t-sm); letter-spacing:.04em;
+}
+.ig blockquote:not([data-processed])::before{
+  content:"Carregando post…";
+  color:var(--text-faint); font-size:var(--t-xs);
+  letter-spacing:.14em; text-transform:uppercase;
+  position:absolute; margin-top:-3rem;
+}
+.ig-note{
+  margin-top:1.75rem; font-size:var(--t-sm); color:var(--text-dim);
+  display:flex; align-items:center; gap:.6rem; flex-wrap:wrap;
+}
+.ig-note a{ color:var(--mel); text-decoration:none; font-weight:500; }
+.ig-note a:hover{ text-decoration:underline; }
+
 /* ---------- depoimentos ---------- */
 .quotes{
   display:grid;
@@ -683,6 +725,7 @@ em{ font-style:italic; }
       <a href="#servicos">Serviços</a>
       <a href="#ritual">Como funciona</a>
       <a href="#resultados">Resultados</a>
+      <a href="#instagram">Instagram</a>
       <a href="#sobre">Sobre mim</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -936,6 +979,46 @@ em{ font-style:italic; }
   </div>
 </section>
 
+<!-- ============================ INSTAGRAM ============================ -->
+<section class="section" id="instagram">
+  <div class="shell spread">
+    <div class="spread__aside"><span class="eyebrow">No Instagram</span></div>
+    <div>
+      <h2>O trabalho, direto do meu feed.</h2>
+      <p class="lede" style="margin-top:1.25rem">
+        Posts reais do meu Instagram — resultados, atendimentos e bastidores.
+        Toque em qualquer um para ver por completo.
+      </p>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="ig">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C8VNOM8pA1S/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C8VNOM8pA1S/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQ9uUJFEaGN/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DQ9uUJFEaGN/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQmnytGEcKb/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DQmnytGEcKb/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C_NoUekur-r/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C_NoUekur-r/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C87uuUQJhZn/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C87uuUQJhZn/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C8HSTIZusmo/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C8HSTIZusmo/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C79BlzaOIL4/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C79BlzaOIL4/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71SfPauVNM/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C71SfPauVNM/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7q0nMeOxjk/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C7q0nMeOxjk/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7RtAlrueSG/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C7RtAlrueSG/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7B7S07Lycy/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C7B7S07Lycy/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C6_QT92rpWi/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C6_QT92rpWi/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C2PeArSLxqc/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C2PeArSLxqc/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C0fZH5xrRQ1/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C0fZH5xrRQ1/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C0fUem4L26L/" data-instgrm-version="14"><a href="https://www.instagram.com/p/C0fUem4L26L/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cy4OUdyrJwJ/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Cy4OUdyrJwJ/" target="_blank" rel="noopener">Ver post no Instagram</a></blockquote>
+    </div>
+    <p class="ig-note">
+      <span class="todo">Ao vivo</span>
+      Os posts carregam direto do Instagram. Veja tudo em
+      <a href="https://www.instagram.com/estetajhorrana/" target="_blank" rel="noopener">@estetajhorrana</a>.
+    </p>
+  </div>
+</section>
+
 <!-- ============================ DEPOIMENTOS ============================ -->
 <section class="section" id="depoimentos">
   <div class="shell spread">
@@ -1114,6 +1197,8 @@ em{ font-style:italic; }
     Agendar pelo WhatsApp
   </a>
 </div>
+
+<script async src="https://www.instagram.com/embed.js"></script>
 
 <script type="application/ld+json">
 {
